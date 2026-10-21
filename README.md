@@ -1,0 +1,2 @@
+# Kolamc
+Kolamc mincraft server
