@@ -1,2 +1,124 @@
-# Kolamc
-Kolamc mincraft server
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071c18">
+<meta name="description" content="KolaMC - سرور ماینکرفت">
+<title>KolaMC | دنیای ماینکرفت</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#35ff9a;--blue:#35bfff;--purple:#b45bff;--panel:rgba(7,14,26,.88)}
+html{scroll-behavior:smooth}
+body{font-family:Tahoma,Arial,sans-serif;color:#f5fbff;min-height:100vh;background:linear-gradient(-45deg,#061a12,#071c35,#250b3d,#063b3a,#061a12);background-size:400% 400%;animation:kolamcColors 14s ease infinite}
+@keyframes kolamcColors{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+a{color:inherit}
+header{position:sticky;top:0;z-index:10;background:rgba(3,8,16,.9);border-bottom:1px solid #35ff9a55;backdrop-filter:blur(12px)}
+.nav{max-width:1100px;margin:auto;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-size:27px;font-weight:900;color:var(--green);text-shadow:0 0 18px #35ff9a88;letter-spacing:1px}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:13px;color:#e4edf5;transition:color .2s}
+nav a:hover{color:var(--green)}
+main{max-width:1100px;margin:auto;padding:20px 16px 40px}
+.hero{text-align:center;padding:68px 12px 48px}
+.hero-icon{font-size:62px;filter:drop-shadow(0 0 18px #35ff9a88);animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+h1{font-size:clamp(38px,8vw,68px);color:var(--green);margin:18px 0;text-shadow:0 0 25px #35ff9a55}
+.hero p{line-height:2;color:#d8e7f2}
+.button{display:inline-block;border:0;border-radius:10px;background:var(--green);color:#04150c;text-decoration:none;font-weight:800;padding:12px 18px;margin:9px 4px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit}
+.button:hover{transform:translateY(-3px);box-shadow:0 0 22px #35ff9a66}
+.button.secondary{background:#14283b;color:#fff;border:1px solid #35bfff88}
+.section{margin:22px 0;padding:25px;border:1px solid #ffffff1c;border-radius:18px;background:var(--panel);box-shadow:0 10px 35px #0003;backdrop-filter:blur(9px)}
+.section-title{text-align:center;color:var(--green);font-size:clamp(22px,5vw,29px);margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:15px}
+.card{background:#0b1524ed;border:1px solid #ffffff20;border-radius:15px;padding:21px 14px;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-5px);border-color:var(--green);box-shadow:0 0 22px #35ff9a22}
+.emoji{font-size:38px;margin-bottom:10px}
+.card h3{margin:8px 0}
+.card p{color:#bdcbd8;font-size:13px;line-height:1.9;margin:8px 0}
+.rank-vip{border-color:#35ff9a88}.rank-vip h3{color:#35ff9a}
+.rank-mvp{border-color:#35bfff88}.rank-mvp h3{color:#35bfff}
+.rank-legend{border-color:#b45bff88}.rank-legend h3{color:#b45bff}
+.rank-elite{border-color:#ffb52e88}.rank-elite h3{color:#ffb52e}
+.rank-hero{border-color:#ff536b88}.rank-hero h3{color:#ff536b}
+.rank-king{border-color:#ffe65a88}.rank-king h3{color:#ffe65a}
+.ip-box{text-align:center;border:1px dashed #35ff9a88;border-radius:14px;padding:20px 12px;background:#07140fee}
+.server-ip{direction:ltr;overflow-wrap:anywhere;color:var(--green);font-size:clamp(16px,4vw,24px);font-weight:bold;margin:14px 0}
+.notice{font-size:12px;line-height:2;color:#ffd58a;margin-top:12px}
+footer{text-align:center;background:#030810ef;border-top:1px solid #35ff9a44;padding:24px 14px;color:#a8bacb;line-height:2}
+@media(max-width:600px){header{position:relative}.nav{justify-content:center}nav{justify-content:center;gap:12px}.hero{padding-top:42px}.section{padding:19px 12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+  <div class="logo">🟩 KolaMC</div>
+  <nav aria-label="منوی اصلی"><a href="#home">خانه</a><a href="#server">سرور</a><a href="#ranks">رنک‌ها</a><a href="#shop">فروشگاه</a><a href="#support">پشتیبانی</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-icon" aria-hidden="true">⚔️🟩</div>
+  <h1>KolaMC</h1>
+  <p>به دنیای هیجان‌انگیز ماینکرفت خوش آمدی!<br>بازی کن، ماجراجویی کن و به یک افسانه تبدیل شو.</p>
+  <a href="#server" class="button">🎮 اطلاعات سرور</a>
+  <a href="#ranks" class="button secondary">👑 مشاهده رنک‌ها</a>
+</section>
+<section class="section" id="server">
+  <h2 class="section-title">🟢 اطلاعات سرور</h2>
+  <div class="ip-box"><p>آدرس سرور ماینکرفت</p>
+    <div class="server-ip" id="serverIP">Kolamcw.aternos.me:31955</div>
+    <button class="button" type="button" id="copyButton">📋 کپی آی‌پی</button>
+    <p id="copyMessage" role="status" aria-live="polite"></p>
+    <p class="notice">وضعیت آنلاین و تعداد بازیکنان هنوز به سامانهٔ آمار زنده متصل نشده است.</p>
+  </div>
+</section>
+<section class="section" id="ranks">
+  <h2 class="section-title">👑 رنک‌های ویژه</h2>
+  <div class="grid">
+    <article class="card rank-vip"><div class="emoji">⭐</div><h3>VIP</h3><p>رنک ویژه برای شروع ماجراجویی</p><p>قیمت: تعیین نشده</p><button class="button rank-button" data-rank="VIP">مشاهده</button></article>
+    <article class="card rank-mvp"><div class="emoji">💎</div><h3>MVP</h3><p>برای بازیکنان حرفه‌ای</p><p>قیمت: تعیین نشده</p><button class="button rank-button" data-rank="MVP">مشاهده</button></article>
+    <article class="card rank-legend"><div class="emoji">🔮</div><h3>LEGEND</h3><p>برای افسانه‌های سرور</p><p>قیمت: تعیین نشده</p><button class="button rank-button" data-rank="LEGEND">مشاهده</button></article>
+    <article class="card rank-elite"><div class="emoji">⚡</div><h3>ELITE</h3><p>جایگاه ویژه و متفاوت</p><p>قیمت: تعیین نشده</p><button class="button rank-button" data-rank="ELITE">مشاهده</button></article>
+    <article class="card rank-hero"><div class="emoji">🔥</div><h3>HERO</h3><p>برای قهرمانان ماینکرفت</p><p>قیمت: تعیین نشده</p><button class="button rank-button" data-rank="HERO">مشاهده</button></article>
+    <article class="card rank-king"><div class="emoji">👑</div><h3>KING</h3><p>رنک سلطنتی KolaMC</p><p>قیمت: تعیین نشده</p><button class="button rank-button" data-rank="KING">مشاهده</button></article>
+  </div>
+  <p class="notice">برای فعال شدن خرید واقعی، قیمت‌ها و روش پرداخت باید تنظیم شوند.</p>
+</section>
+<section class="section" id="shop">
+  <h2 class="section-title">🛒 فروشگاه KolaMC</h2>
+  <div class="grid">
+    <article class="card"><div class="emoji">👑</div><h3>خرید رنک</h3><p>رنک مورد علاقه‌ات را انتخاب کن.</p><a class="button" href="#ranks">مشاهده رنک‌ها</a></article>
+    <article class="card"><div class="emoji">⚔️</div><h3>آیتم‌های ویژه</h3><p>بخش آیتم‌ها به‌زودی تکمیل می‌شود.</p><button class="button secondary soon-button">مشاهده</button></article>
+    <article class="card"><div class="emoji">🎁</div><h3>پیشنهادهای ویژه</h3><p>منتظر پیشنهادهای آینده باش.</p><button class="button secondary soon-button">مشاهده</button></article>
+  </div>
+</section>
+<section class="section" id="support">
+  <h2 class="section-title">💬 پشتیبانی</h2>
+  <p style="text-align:center;line-height:2;color:#d5e5ef">برای ارتباط با مدیریت، راه ارتباطی رسمی سرور را اینجا قرار بده.</p>
+  <div style="text-align:center"><button class="button" id="supportButton">ارتباط با پشتیبانی</button></div>
+</section>
+</main>
+<footer><div class="logo">🟩 KolaMC</div><p>مرجع گیمینگ ماینکرفت</p><p>© KolaMC - تمامی حقوق محفوظ است.</p></footer>
+<script>
+const ip = document.getElementById('serverIP').textContent;
+document.getElementById('copyButton').addEventListener('click', async () => {
+  const msg = document.getElementById('copyMessage');
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(ip);
+      msg.textContent = '✅ آی‌پی کپی شد!';
+    } else {
+      window.prompt('آی‌پی را انتخاب و کپی کن:', ip);
+    }
+  } catch (e) {
+    window.prompt('آی‌پی را انتخاب و کپی کن:', ip);
+  }
+});
+document.querySelectorAll('.rank-button').forEach(button => {
+  button.addEventListener('click', () => alert('رنک ' + button.dataset.rank + '\\nقیمت و لینک پرداخت هنوز تنظیم نشده است.'));
+});
+document.querySelectorAll('.soon-button').forEach(button => button.addEventListener('click', () => alert('این بخش به‌زودی فعال می‌شود!')));
+document.getElementById('supportButton').addEventListener('click', () => alert('لینک پشتیبانی هنوز تنظیم نشده است.'));
+</script>
+</body>
+</html>
